@@ -10,7 +10,7 @@
 
 :root{
     --text-color: #3f3f3f;
-    --main-color: #DAF7A6;
+    --main-color: #dbdbdb;
     
 
     --p-size: 1.3rem;
@@ -23,14 +23,71 @@ body{
     height: 100%;
     font-family: 'Lato' !important;
     /* background-color: #E0E0E0; */
-    background: rgb(219,219,219);
+    background: var(--main-color);
     background: linear-gradient(180deg, rgba(219,219,219,1) 0%, rgba(255,255,255,1) 100%);
-
+    display: grid;
 }
 
+/* Nav Bar */
+nav {
+    top: 0;
+    left: 0;
+    display: block;
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    background-color: var(--text-color);
+}
+nav .menu {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+nav .menu a{
+    display: block;
+    height: 60px;
+    width: 60px;
+    align-items: center;
+    padding: 50px 0;
+}
+nav .menu a::before{
+    content: attr(text);
+    visibility: hidden;
+    opacity: 0;
+    width: fit-content;
+    background-color: var(--text-color);
+    color: var(--main-color);
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    transition: opacity 1s ease-in-out;
+    position: fixed;
+    z-index: 1;
+    left: 50px;
+}
+nav .menu a:hover{
+    transform: translateX(5px);
+    transition: all .3s;
+}
+nav .menu a:hover::before{
+    opacity: 1;
+    visibility: visible;
+}
+nav .menu a i{
+    font-size: 30px;
+    color: var(--main-color);
+    width: fit-content;
+    height: fit-content;
+}
+
+/* Container */
 .container{
     height: 100%;
+    margin-left: 60px;
 }
+
 /* Search Bar */
 .header{
     display: flex;
@@ -136,7 +193,7 @@ body{
     margin-bottom: 15px;
 }
 .row p{
-    color: var(--secound-color);
+    color: var(--text-color);
     line-height: 30px;
     font-size: 2.3rem;
     font-weight: 900;
@@ -151,13 +208,6 @@ body{
 .options .row:hover{
     transform: scale(1.05);
 }
-
-
-
-
-
-
-
 
 
 
