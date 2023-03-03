@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <section class="header">
+            <div class="search-box">
+                <button class="btn-search"><i class="fas fa-search"></i></button>
+                <input type="text" class="input-search" placeholder="Cerca telefono...">
+              </div>
+        </section>
+    
+        <section class="stats">
+            <!-- <div class="center">
+                <h2>Servizi</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis arcu sit amet ornare tempus. <br>Suspendisse suscipit dolor ut enim cursus, at consectetur lectus blandit.</p>
+            </div> -->
+    
+            <div class="stats-content">
+                <div class="row" onclick="runAnimation()">
+                    <h3>Statistica 1</h3>
+                    <p class="stats-number">1000</p>
+                </div>
+    
+                <div class="row">
+                    <h3>Statistica 2</h3>
+                    <p class="stats-number">230</p>
+                </div>
+    
+                <div class="row">
+                    <h3>Statistica 3</h3>
+                    <p class="stats-number">320</p>
+                </div>
+    
+                <div class="row">
+                    <h3>Statistica 4</h3>
+                    <p class="stats-number">560</p>
+                </div>
+    
+                <div class="row">
+                    <h3>Statistica 5</h3>
+                    <p class="stats-number">10</p>
+                </div>
+            </div>
+        </section>
+    
+        <section class="options">
+            <div class="options-content">
+                <div class="row">
+                    <i class='bx bx-git-compare'></i>
+                    <p>Confronta gli smartphone</p>
+                </div>
+    
+                <div class="row" id="searchIcon">
+                    <i class='bx bx-search-alt'></i>
+                    <p>Cerca lo smartphone che ti interessa</p>
+                </div>
+    
+                <div id="infoText" class="row infoButton" >
+                    <i class='bx bx-info-circle'></i>
+                    <p>Info</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="popup infoText">
+        <button class="close" id="infoText">&times;</button>
+        <h2>Info</h2>
+        <p style="color: black">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam rhoncus, metus et ultrices fringilla, urna mi vehicula libero, ac sollicitudin velit tellus eu tellus. Maecenas at mollis sem, sed viverra augue. Vestibulum dui mauris, cursus id laoreet at, ultrices et dolor. Cras aliquet nibh vitae eros dapibus, id egestas lacus elementum. Aliquam sollicitudin sollicitudin feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean accumsan dui a erat eleifend, sed pretium sem mattis. Mauris volutpat at ipsum vel fermentum. Etiam dapibus eros sed magna semper, non elementum lacus commodo.
+        </p>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
