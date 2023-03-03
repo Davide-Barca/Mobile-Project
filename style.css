@@ -102,7 +102,7 @@ body{
 .options-content,
 .stats-content{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
     grid-gap: 2rem;
     text-align: center;
     align-items: center;
