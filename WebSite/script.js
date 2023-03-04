@@ -32,9 +32,14 @@ document.getElementById("searchIcon").addEventListener("click", () => {
   document.querySelector(".input-search").focus();
 });
 
+document.getElementById("compare").addEventListener("click", () => {
+  window.open("/Pages/compare.html", "_self")
+});
+
 let popup = document.querySelector('.options .options-content .infoButton')
 let popupClose = document.querySelector('.popup .close')
-let body = document.querySelector('.container')
+let container = document.querySelector('.container')
+let navBar = document.querySelector('nav')
 
 popup.addEventListener('click', (el) => {
     let id = el.target.parentElement.id
@@ -49,13 +54,15 @@ popupClose.addEventListener('click', (el) => {
 function showInfo(o){
   let el = document.querySelector('.'+ o)
   el.classList.add('visible')
-  body.style.filter = 'blur(10px)'
+  container.style.filter = 'blur(10px)'
+  navBar.style.filter = 'blur(10px)'
 }
 
 function hideInfo(o){
   let el = document.querySelector('.'+ o)
   el.classList.remove('visible')
-  body.style.filter = 'blur(0)'
+  container.style.filter = 'blur(0)'
+  navBar.style.filter = 'blur(0)'
 }
 
 runAnimations()
