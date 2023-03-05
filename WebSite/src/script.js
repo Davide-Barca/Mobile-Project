@@ -35,7 +35,7 @@ document.getElementById("searchIcon").addEventListener("click", () => {
 });
 
 document.getElementById("compare").addEventListener("click", () => {
-  window.open("/pages/compare.html", "_self")
+  window.open("/compare/", "_self")
 });
 
 let popup = document.querySelector('.options .options-content .infoButton')
