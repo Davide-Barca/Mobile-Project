@@ -104,7 +104,7 @@ searchBarOne.addEventListener('keypress', (k) => {
 searchBarTwo.addEventListener('keypress', (k) => {
     if(k.key == 'Enter'){
         if(!checkPhone(searchBarTwo.value, 2)){
-            window.alert("telefono non torvato tra l'elenco")
+            swal("Attenzione!", "Telefono non trovato nella lista.\nAssicurati di aver scritto secondo il formato che segue:\n\nBRAND MODELLO", "error")
         }
     }
 })
