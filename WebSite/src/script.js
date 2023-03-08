@@ -67,4 +67,53 @@ function hideInfo(o){
   navBar.style.filter = 'blur(0)'
 }
 
-runAnimations()
+
+
+
+
+
+/**
+ * Stats info
+ * 
+ *  0 -> Telefono piu venduto
+ *  1 -> Telefono piu costoso
+ *  2 -> Telefono piu economico
+ *  3 -> Marca Telefono piu venduto
+ *  4 -> Telefoni totali venduti (in mln)
+ */
+
+let stats = []
+let dataLoaded = false
+
+let stat1 = document.querySelector('.stats .stats-content .stat1 p')
+let stat2 = document.querySelector('.stats .stats-content .stat2 p')
+let stat3 = document.querySelector('.stats .stats-content .stat3 p')
+let stat4 = document.querySelector('.stats .stats-content .stat4 p')
+let stat5 = document.querySelector('.stats .stats-content .stat5 p')
+
+
+async function stackData(){
+  const url = '/files/output.txt'
+  const response = await fetch(url)
+  const tabledata = await response.text()
+  onArray(tabledata)
+}
+
+function onArray(data){
+  data.split('\n').forEach((el) => {
+      stats.push(el)
+  })
+  console.log(stats)
+  addStats()
+}
+
+function addStats(){
+  stat1.innerHTML = stats[0]
+  stat2.innerHTML = stats[1]
+  stat3.innerHTML = stats[2]
+  stat4.innerHTML = stats[3]
+  stat5.innerHTML = stats[4] + " mln"
+}
+
+stackData()
+// runAnimations()
