@@ -160,15 +160,17 @@ nav .menu a i{
 .options-content,
 .stats-content,
 .compare-content{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    display: flex;
+    /* grid-template-columns: repeat(auto-fit, minmax(260px, auto)); */
+    flex-wrap: wrap;
     grid-gap: 2rem;
     text-align: center;
     align-items: center;
-    margin-top: 60px;
-    padding: 0 40px;
+    padding: 40px;
 }
 .row{
+    /* width: 200px; */
+    flex: 1 1 400px;
     padding: 55px 30px;
     border-radius: 10px;
     cursor: pointer;
@@ -191,13 +193,13 @@ nav .menu a i{
 .row h3{
     color: var(--text-color);
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 15px;
 }
 .row p{
     color: var(--text-color);
     line-height: 30px;
-    font-size: 2.3rem;
+    font-size: 1.5rem;
     font-weight: 900;
 }
 .options .row p{
