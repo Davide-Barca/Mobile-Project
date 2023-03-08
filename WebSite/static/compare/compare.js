@@ -17,7 +17,7 @@
 let phoneInfo = []
 let dataLoaded = false
 async function stackData(){
-    const url = '/files/phoneInfo.csv'
+    const url = 'C:/Users/david/Desktop/phoneInfo.csv'
     const response = await fetch(url)
     const tabledata = await response.text()
     onArray(tabledata)

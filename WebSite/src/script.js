@@ -31,7 +31,8 @@ const runAnimations = () => {
 
 
 document.getElementById("searchIcon").addEventListener("click", () => {
-  document.querySelector(".input-search").focus();
+  // document.querySelector(".input-search").focus();
+  window.open("/phone/", "_self")
 });
 
 document.getElementById("compare").addEventListener("click", () => {
