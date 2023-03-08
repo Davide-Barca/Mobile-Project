@@ -16,6 +16,11 @@
     --p-size: 1.3rem;
 }
 
+/* change alert button background */
+.sa-confirm-button-container button{
+    background-color: #3f3f3f !important;
+}
+
 html,
 body{
     margin: 0px;
